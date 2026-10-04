@@ -1,0 +1,35 @@
+/firmware/build/
+/tmp/
+# 旧应用历史完整保留，仅供本机查询
+/firmware/.git-legacy-backup/
+
+# 构建、临时、IDE及私有文件
+build/
+/tmp/
+.vscode/
+/.agents/
+/.codex/
+*.o
+*.obj
+*.elf
+*.hex
+*.bin
+*.map
+*.log
+.env
+.env.*
+*.local.*
+app_mqtt_private_config.h
+app_mqtt_private_credentials.h
+*.pem
+*.key
+*.pfx
+*.p12
+
+# 服务分发、厂商与客户原始材料只留在本机
+/tools/
+/resources/
+/*.html
+/docs/*.docx
+/docs/.*.md
+/firmware/笔记.md

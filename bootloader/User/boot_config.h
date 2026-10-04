@@ -1,0 +1,21 @@
+#ifndef BOOT_CONFIG_H
+#define BOOT_CONFIG_H
+
+/* 与协议中的型号、分区和格式一致；Application独立维护自己的定义。 */
+#define BOOT_HARDWARE_MODEL           "FIRE_F103_V2"
+#define BOOT_APPLICATION_START        0x08010000UL
+#define BOOT_APPLICATION_SIZE         0x70000UL
+#define BOOT_IMAGE_HEADER_SIZE        512U
+#define BOOT_METADATA_A_ADDRESS       0x000000UL
+#define BOOT_METADATA_B_ADDRESS       0x001000UL
+#define BOOT_METADATA_RECORD_SIZE     256U
+#define BOOT_CANDIDATE_ADDRESS         0x010000UL   /* 候选固件存储起始地址 */
+#define BOOT_CANDIDATE_CAPACITY        0x100000UL
+
+/* 单位为次数和毫秒；约束安装/启动及W25Q64忙轮询。 */
+#define BOOT_INSTALL_ATTEMPT_LIMIT    3U
+#define BOOT_START_ATTEMPT_LIMIT      3U
+#define BOOT_SECTOR_ERASE_TIMEOUT_MS  1000U
+#define BOOT_PAGE_PROGRAM_TIMEOUT_MS  100U
+
+#endif /* BOOT_CONFIG_H */
